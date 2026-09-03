@@ -6,7 +6,7 @@
   var nav = document.querySelector('.site-nav');
   var links = document.querySelectorAll('.site-nav a');
   var pulse = document.getElementById('pulse-status');
-  var pulseLabels = ['onchain & present', 'watching the flow', 'building the room'];
+  var pulseLabels = ['open 24/7', 'signal green', 'building the room'];
   var pulseIndex = 0;
 
   function closeMenu() {
