@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>IYAN — Community Lead · Partnerships · Biz Dev · Moderator</title>
+  <meta name="description"
+    content="Web3 community lead, partnerships and biz dev operator, moderator. Rooms that hold after mint. Deals that convert. Every case editable in Studio." />
+  <meta name="theme-color" content="#050506" />
+  <meta name="color-scheme" content="dark" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="IYAN — Community Lead · Partnerships · Biz Dev · Moderator" />
+  <meta property="og:description"
+    content="Blue-black ops portfolio for a web3 community operator. Four seats, one operator." />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232f80ff'/%3E%3Cpath d='M11 8h3.4v16H11zM17 8h4v3h-4zm0 5.5h4V24h-4z' fill='%23040810'/%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/css/core.css" />
+  <link rel="stylesheet" href="assets/css/site.css" />
+  <link rel="stylesheet" href="assets/css/studio.css" />
+</head>
+
+<body data-loading="true">
+
+  <!-- ───────────────── preloader ───────────────── -->
+  <div class="boot" id="boot" aria-hidden="true">
+    <div class="boot-inner">
+      <div class="boot-mark">IYAN</div>
+      <div class="boot-bar"><i id="boot-fill"></i></div>
+      <div class="boot-log" id="boot-log">initialising</div>
+    </div>
+  </div>
+
+  <!-- ───────────────── ambient layers ───────────────── -->
+  <canvas class="bg-canvas" id="bg-canvas" aria-hidden="true"></canvas>
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-glow" id="bg-glow" aria-hidden="true"></div>
+  <div class="bg-grain" aria-hidden="true"></div>
+
+  <div class="cursor" id="cursor" aria-hidden="true"><i></i></div>
+  <div class="cursor-ring" id="cursor-ring" aria-hidden="true"><b>Open</b></div>
+
+  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+
+  <a class="skip" href="#work">Skip to the work</a>
+
+  <!-- ───────────────── nav ───────────────── -->
+  <header class="nav" id="nav">
+    <div class="shell nav-inner">
+      <a class="brand" href="#home" data-nav>
+        <span class="brand-mark" id="brand-mark">I</span>
+        <span class="brand-text"><b id="brand-name">IYAN</b><i>.</i></span>
+      </a>
+
+      <nav class="nav-links" aria-label="Sections">
+        <a href="#work" data-nav data-spy="work"><span>Work</span></a>
+        <a href="#seats" data-nav data-spy="seats"><span>Seats</span></a>
+        <a href="#ops" data-nav data-spy="ops"><span>Ops</span></a>
+        <a href="#timeline" data-nav data-spy="timeline"><span>Track</span></a>
+        <a href="#voices" data-nav data-spy="voices"><span>Floor</span></a>
+      </nav>
+
+      <div class="nav-tools">
+        <button class="kbd-btn" id="palette-btn" type="button" title="Command palette">
+          <span class="kbd-btn-i">⌘</span><span>K</span>
+        </button>
+        <button class="nav-ghost" id="edit-btn" type="button">Studio</button>
+        <a class="nav-cta magnet" href="#contact" data-nav>Open a seat</a>
+        <button class="burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false">
+          <i></i><i></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ───────────────── mobile drawer ───────────────── -->
+  <div class="drawer" id="drawer" hidden>
+    <nav class="drawer-links" aria-label="Mobile menu">
+      <a href="#work" data-nav><em>01</em>Work</a>
+      <a href="#seats" data-nav><em>02</em>Seats</a>
+      <a href="#ops" data-nav><em>03</em>Ops</a>
+      <a href="#timeline" data-nav><em>04</em>Track</a>
+      <a href="#voices" data-nav><em>05</em>Floor</a>
+      <a href="#contact" data-nav><em>06</em>Contact</a>
+    </nav>
+    <div class="drawer-foot">
+      <button class="btn btn-ghost" id="edit-btn-m" type="button">Open Studio</button>
+      <div class="socials" id="drawer-socials"></div>
+    </div>
+  </div>
+
+  <!-- ───────────────── section rail ───────────────── -->
+  <aside class="rail" id="rail" aria-hidden="true">
+    <a href="#home" data-nav data-rail="home"><span>Top</span></a>
+    <a href="#work" data-nav data-rail="work"><span>Work</span></a>
+    <a href="#seats" data-nav data-rail="seats"><span>Seats</span></a>
+    <a href="#ops" data-nav data-rail="ops"><span>Ops</span></a>
+    <a href="#timeline" data-nav data-rail="timeline"><span>Track</span></a>
+    <a href="#voices" data-nav data-rail="voices"><span>Floor</span></a>
+    <a href="#contact" data-nav data-rail="contact"><span>Contact</span></a>
+  </aside>
+
+  <main>
+
+    <!-- ───────────────── hero ───────────────── -->
+    <section class="hero" id="home">
+      <div class="shell">
+
+        <div class="hero-kicker reveal">
+          <span class="live"><i></i></span>
+          <span data-edit="profile.kicker" id="kicker">Lagos · Web3 ops</span>
+          <span class="hero-kicker-sep">/</span>
+          <span class="hero-clock" id="clock">--:--</span>
+          <span class="hero-tz" id="clock-tz"></span>
+        </div>
+
+        <h1 class="hero-name" id="hero-name" data-edit="profile.name">Iyanuoluwa</h1>
+
+        <!-- the four seats, at scale. built from profile.seats;
+             clicking a row filters the work grid to that seat. -->
+        <div class="seat-stack" id="seat-stack" role="group" aria-label="Seats I take"></div>
+
+        <div class="hero-body">
+          <div class="hero-left reveal">
+            <p class="lede" id="bio" data-edit="profile.bio"></p>
+            <div class="hero-cta">
+              <a class="btn btn-primary magnet" href="#work" data-nav>
+                <span>See the work</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                  <path d="M5 12h13M12 5l7 7-7 7" />
+                </svg>
+              </a>
+              <a class="btn btn-ghost magnet" href="#contact" data-nav id="cta-2">Open a seat</a>
+            </div>
+            <div class="hero-proof" id="hero-proof">
+              <span class="op-label">Chains I work</span>
+              <div class="hero-chains" id="hero-chains" role="group" aria-label="Filter work by chain"></div>
+            </div>
+          </div>
+
+          <aside class="hero-right reveal">
+            <div class="panel op-card">
+              <div class="op-head">
+                <div>
+                  <span class="op-label">Status</span>
+                  <strong class="op-avail" id="availability" data-edit="profile.availability">Open</strong>
+                </div>
+                <span class="op-badge" id="op-badge">4 seats</span>
+              </div>
+              <dl class="op-rows" id="op-rows"></dl>
+              <div class="socials" id="socials"></div>
+            </div>
+          </aside>
+        </div>
+
+        <div class="statbar reveal" id="statbar"></div>
+      </div>
+
+      <div class="hero-fade" aria-hidden="true"></div>
+    </section>
+
+    <!-- ───────────────── ticker ───────────────── -->
+    <div class="tickers" aria-hidden="true">
+      <div class="tick-row">
+        <div class="tick" id="tick-a"></div>
+      </div>
+      <div class="tick-row alt">
+        <div class="tick" id="tick-b"></div>
+      </div>
+    </div>
+
+    <!-- ───────────────── work ───────────────── -->
+    <section class="sec" id="work">
+      <div class="shell">
+        <header class="sec-head reveal">
+          <div>
+            <div class="sec-idx">01 — Rooms</div>
+            <h2 class="sec-title">Work you can<br /><em>actually read.</em></h2>
+          </div>
+          <div class="sec-aside">
+            <p data-edit="copy.workLead"></p>
+            <div class="sec-count"><b id="work-count">0</b><span>cases logged</span></div>
+          </div>
+        </header>
+
+        <div class="toolbar reveal">
+          <div class="filters" id="filters" role="group" aria-label="Filter by seat"></div>
+          <div class="toolbar-right">
+            <label class="search">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="7" />
+                <path d="m20 20-3.5-3.5" />
+              </svg>
+              <input type="search" id="work-search" placeholder="Search rooms, chains, clients…"
+                aria-label="Search work" />
+            </label>
+            <select id="work-sort" aria-label="Sort work">
+              <option value="curated">Curated</option>
+              <option value="new">Newest</option>
+              <option value="old">Oldest</option>
+              <option value="az">A → Z</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="chainbar" id="chainbar" role="group" aria-label="Filter by chain"></div>
+
+        <div class="work-hint" id="work-hint" hidden>
+          <span id="work-hint-text"></span>
+          <button class="btn btn-sm btn-ghost" type="button" id="work-hint-clear">Clear</button>
+        </div>
+
+        <div class="bento" id="work-grid"></div>
+        <div class="empty" id="work-empty" hidden>
+          <b>Nothing matches that.</b>
+          <span>Clear the filters, or add the case in Studio.</span>
+          <button class="btn btn-ghost" type="button" id="work-reset">Reset filters</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────────────── seats / services ───────────────── -->
+    <section class="sec" id="seats">
+      <div class="shell">
+        <header class="sec-head reveal">
+          <div>
+            <div class="sec-idx">02 — Seats</div>
+            <h2 class="sec-title">What I <em>actually run.</em></h2>
+          </div>
+          <div class="sec-aside">
+            <p data-edit="copy.seatsLead"></p>
+          </div>
+        </header>
+        <div class="svc-grid" id="services"></div>
+      </div>
+    </section>
+
+    <!-- ───────────────── ops ───────────────── -->
+    <section class="sec" id="ops">
+      <div class="shell">
+        <header class="sec-head reveal">
+          <div>
+            <div class="sec-idx">03 — Ops</div>
+            <h2 class="sec-title">How I <em>operate.</em></h2>
+          </div>
+          <div class="sec-aside">
+            <p data-edit="copy.opsLead"></p>
+          </div>
+        </header>
+
+        <div class="ops-grid">
+          <div class="ops-left reveal">
+            <div class="panel ops-panel">
+              <span class="op-label">Chains I work</span>
+              <div class="cloud" id="chains"></div>
+              <span class="op-label" style="margin-top:26px">Arsenal</span>
+              <div class="cloud" id="arsenal"></div>
+            </div>
+          </div>
+          <div class="dir-grid" id="directives"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────────────── timeline ───────────────── -->
+    <section class="sec" id="timeline">
+      <div class="shell">
+        <header class="sec-head reveal">
+          <div>
+            <div class="sec-idx">04 — Track</div>
+            <h2 class="sec-title">Seats, <em>not slogans.</em></h2>
+          </div>
+          <div class="sec-aside">
+            <p data-edit="copy.trackLead"></p>
+          </div>
+        </header>
+        <div class="track" id="track"></div>
+      </div>
+    </section>
+
+    <!-- ───────────────── voices ───────────────── -->
+    <section class="sec" id="voices">
+      <div class="shell">
+        <header class="sec-head reveal">
+          <div>
+            <div class="sec-idx">05 — Floor</div>
+            <h2 class="sec-title">What they said <em>after mint.</em></h2>
+          </div>
+          <div class="sec-aside">
+            <p data-edit="copy.voicesLead"></p>
+            <div class="carousel-ctl">
+              <button type="button" id="voice-prev" aria-label="Previous quote">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                  <path d="M15 5l-7 7 7 7" />
+                </svg>
+              </button>
+              <button type="button" id="voice-next" aria-label="Next quote">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                  <path d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </header>
+        <div class="voice-track" id="voice-track"></div>
+        <div class="dots" id="voice-dots"></div>
+      </div>
+    </section>
+
+    <!-- ───────────────── contact ───────────────── -->
+    <section class="sec" id="contact">
+      <div class="shell">
+        <div class="contact-grid">
+          <div class="reveal">
+            <div class="sec-idx">06 — Contact</div>
+            <h2 class="sec-title" id="contact-headline" data-edit="contact.headline">Open a seat.</h2>
+            <p class="lede" id="contact-sub" data-edit="contact.sub"></p>
+            <p class="fine" id="contact-note" data-edit="contact.note"></p>
+
+            <div class="contact-direct" id="contact-direct"></div>
+            <div class="socials" id="contact-socials"></div>
+          </div>
+
+          <form class="panel form reveal" id="contact-form" novalidate>
+            <div class="form-head">
+              <span class="op-label">Brief</span>
+              <span class="form-note">Opens your mail client — no server, no list.</span>
+            </div>
+            <div class="f2">
+              <label><span>Your name</span><input name="name" required placeholder="What should I call you" /></label>
+              <label><span>Project / handle</span><input name="project" placeholder="@yourproject" /></label>
+            </div>
+            <label><span>Email</span><input type="email" name="email" required placeholder="you@project.xyz" /></label>
+            <div class="f2">
+              <label><span>Seat you need</span>
+                <select name="seat" id="seat-select"></select>
+              </label>
+              <label><span>Chain</span>
+                <select name="chain" id="chain-select"></select>
+              </label>
+            </div>
+            <label><span>Timeline</span><input name="when" placeholder="Mint in 5 weeks · starts Sept" /></label>
+            <label><span>What broke last time</span><textarea name="message" required
+                placeholder="Tell me what you tried, what died, and what the room needs now."></textarea></label>
+            <button class="btn btn-primary magnet" type="submit">
+              <span>Send the brief</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <path d="M5 12h13M12 5l7 7-7 7" />
+              </svg>
+            </button>
+            <p class="form-err" id="form-err" hidden></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ───────────────── footer ───────────────── -->
+  <footer class="foot">
+    <div class="shell">
+      <div class="foot-word" id="foot-word" aria-hidden="true">IYAN</div>
+      <div class="foot-rows">
+        <small>© <span id="year"></span> <span id="foot-brand">IYAN</span> — built to be edited.</small>
+        <small class="foot-links">
+          <button type="button" id="edit-btn-2">Studio</button>
+          <span>·</span>
+          <button type="button" id="palette-btn-2">⌘K</button>
+          <span>·</span>
+          <a href="#home" data-nav>Back to top</a>
+        </small>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ───────────────── case dossier ───────────────── -->
+  <div class="dossier" id="dossier" hidden>
+    <div class="dossier-scrim" data-close></div>
+    <article class="dossier-card" role="dialog" aria-modal="true" aria-labelledby="d-title">
+      <div class="dossier-handle" aria-hidden="true"></div>
+      <header class="dossier-cover" id="d-cover">
+        <button class="dossier-close" id="d-close" type="button" aria-label="Close case">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <path d="M6 6l12 12M18 6L6 18" />
+          </svg>
+        </button>
+        <div class="dossier-cover-in">
+          <div class="sec-idx" id="d-kicker"></div>
+          <h3 id="d-title"></h3>
+        </div>
+      </header>
+
+      <div class="dossier-body">
+        <dl class="dossier-meta" id="d-meta"></dl>
+        <p class="dossier-summary" id="d-summary"></p>
+        <p class="dossier-desc" id="d-desc"></p>
+
+        <div class="dossier-split">
+          <div>
+            <span class="op-label">What held</span>
+            <ul class="bullets" id="d-highlights"></ul>
+          </div>
+          <div>
+            <span class="op-label">Numbers</span>
+            <div class="metrics" id="d-metrics"></div>
+          </div>
+        </div>
+
+        <div class="cloud" id="d-tags"></div>
+        <div class="socials" id="d-links"></div>
+      </div>
+
+      <nav class="dossier-nav">
+        <button type="button" id="d-prev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <path d="M15 5l-7 7 7 7" />
+          </svg><span>Prev</span></button>
+        <span class="dossier-pos" id="d-pos"></span>
+        <button type="button" id="d-next"><span>Next</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2.2">
+            <path d="M9 5l7 7-7 7" />
+          </svg></button>
+      </nav>
+    </article>
+  </div>
+
+  <!-- ───────────────── command palette ───────────────── -->
+  <div class="palette" id="palette" hidden>
+    <div class="palette-scrim" data-close></div>
+    <div class="palette-card" role="dialog" aria-modal="true" aria-label="Command palette">
+      <div class="palette-input">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="7" />
+          <path d="m20 20-3.5-3.5" />
+        </svg>
+        <input id="palette-q" placeholder="Jump to a room, a section, or run a command…" autocomplete="off"
+          spellcheck="false" />
+        <kbd>esc</kbd>
+      </div>
+      <div class="palette-list" id="palette-list"></div>
+      <div class="palette-foot">
+        <span><kbd>↑</kbd><kbd>↓</kbd> move</span>
+        <span><kbd>↵</kbd> run</span>
+        <span><kbd>E</kbd> studio</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ───────────────── studio ───────────────── -->
+  <div class="studio" id="studio" hidden>
+    <aside class="st-rail">
+      <div class="st-brand">
+        <span class="brand-mark">I</span>
+        <div><b>Studio</b><small id="st-saved">autosaved</small></div>
+      </div>
+
+      <nav class="st-tabs" id="st-tabs">
+        <button type="button" data-tab="identity" aria-current="true"><i>◆</i>Identity</button>
+        <button type="button" data-tab="works"><i>▦</i>Works <em id="st-works-n">0</em></button>
+        <button type="button" data-tab="seats"><i>▤</i>Seats</button>
+        <button type="button" data-tab="ops"><i>◈</i>Ops</button>
+        <button type="button" data-tab="track"><i>▸</i>Track</button>
+        <button type="button" data-tab="voices"><i>❝</i>Voices</button>
+        <button type="button" data-tab="numbers"><i>▪</i>Stats &amp; ticker</button>
+        <button type="button" data-tab="copy"><i>¶</i>Section copy</button>
+        <button type="button" data-tab="contact"><i>✉</i>Contact</button>
+        <button type="button" data-tab="data"><i>{}</i>Data</button>
+      </nav>
+
+      <div class="st-spacer"></div>
+
+      <div class="st-history">
+        <button type="button" id="st-undo" title="Undo (Ctrl+Z)">↶ Undo</button>
+        <button type="button" id="st-redo" title="Redo (Ctrl+Shift+Z)">↷ Redo</button>
+      </div>
+      <button class="btn btn-primary st-exit" type="button" id="st-close">View site</button>
+    </aside>
+
+    <div class="st-main" id="st-main"></div>
+  </div>
+
+  <div class="dock" id="dock">
+    <a class="btn btn-ghost" href="#work" data-nav>See the work</a>
+    <a class="btn btn-primary" href="#contact" data-nav>Open a seat</a>
+  </div>
+
+  <div class="toast" id="toast" hidden></div>
+  <div class="quickbar" id="quickbar" hidden>
+    <span class="quickbar-dot"></span>
+    <b>Inline edit on</b>
+    <small>Click any highlighted text. Changes save as you go.</small>
+    <button type="button" id="quick-off">Done</button>
+  </div>
+
+  <script type="application/ld+json" id="ld-json">{}</script>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/store.js"></script>
+  <script src="assets/js/fx.js"></script>
+  <script src="assets/js/render.js"></script>
+  <script src="assets/js/palette.js"></script>
+  <script src="assets/js/studio.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+
+</html>
